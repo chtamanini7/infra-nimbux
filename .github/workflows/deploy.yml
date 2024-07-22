@@ -7,11 +7,6 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:
-    inputs:
-      docker_image_sha:
-        description: 'Docker image SHA'
-        required: true
 
 jobs:
   deploy:
@@ -37,7 +32,7 @@ jobs:
       run: terraform init
 
     - name: Terraform Plan
-      run: terraform plan -var docker_image_sha=${{ github.event.inputs.docker_image_sha }}
+      run: terraform plan
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve -var docker_image_sha=${{ github.event.inputs.docker_image_sha }}
+      run: terraform apply -auto-approve
