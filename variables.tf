@@ -8,7 +8,7 @@ variable "vpc_cidr" {
   default     = "10.0.0.0/16"
 }
 
-variable "docker_image_sha" {
-  description = "SHA of the Docker image"
-  type        = string
-}
+#variable "docker_image_sha" {
+#  description = "SHA of the Docker image"
+#  type        = string
+#}

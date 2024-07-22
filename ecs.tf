@@ -16,7 +16,7 @@ resource "aws_ecs_task_definition" "ecs_task_definition" {
   container_definitions = jsonencode([
     {
       name      = "dockergs"
-      image     = "654654479623.dkr.ecr.us-east-1.amazonaws.com/hello-world:${var.docker_image_sha}"
+      image     = "654654479623.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest"
       cpu       = 256
       memory    = 512
       essential = true
