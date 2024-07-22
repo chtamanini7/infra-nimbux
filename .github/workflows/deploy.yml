@@ -32,10 +32,10 @@ jobs:
       run: terraform init
 
     - name: Terraform Plan
-      run: terraform plan
+      run: terraform plan -var ecr_name_value=${{ secrets.ECR_REGISTRY }}
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve
+      run: terraform apply -auto-approve -var ecr_name_value=${{ secrets.ECR_REGISTRY }}
 
   approve-destroy:
     name: Approve Destroy
