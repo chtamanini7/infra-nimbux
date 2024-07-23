@@ -37,6 +37,10 @@ Al terminar de correr el pipeline, se devolvera la DNS del ALB para que se pueda
 
 El respositorio esta automatizado de modo que si se hace un push a *main*, este ejecutara el pipeline con los pasos correspondientes a deployar la infraestructura. \
 **IMPORTANTE** se deben configurar previamente los secrets.
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- AWS_REGION (no modificar, es default, *us-east-1*)
+- ECR_REGISTRY (*account-id.dkr.ecr.us-east-1.amazonaws.com/hello-world*)
 
 En caso de querer correrlo en **local**:
 - clonar el respositorio
