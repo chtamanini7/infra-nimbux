@@ -16,7 +16,7 @@ Se utiliza para correr de manera automatica los pasos correspondientes a deploya
 - Terraform init
 - Terraform plan
 - Terraform apply
-- Terraform destroy (opcional, tiene un timer)
+- Terraform destroy (opcional, tiene un timer de 30m)
 
 ### .tf files
 
