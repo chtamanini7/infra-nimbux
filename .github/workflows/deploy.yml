@@ -37,8 +37,8 @@ jobs:
     - name: Terraform Apply
       run: terraform apply -auto-approve -var ecr_name_value=${{ secrets.ECR_REGISTRY }}
 
-    - name: Wait for 30 minutes
-      run: sleep 1800
+    - name: Wait for 120 minutes
+      run: sleep 7200
 
     - name: Terraform Destroy
       run: terraform destroy -auto-approve -var ecr_name_value=${{ secrets.ECR_REGISTRY }}
